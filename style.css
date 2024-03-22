@@ -19,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  padding-bottom: 15px
 }
 
 .dot-container {
