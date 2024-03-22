@@ -10,8 +10,8 @@ body {
 }
 
 #app {
-  width: 425px;
-  height: 285px;
+  width: 385px;
+  height: 275px;
   background-image: url("/action-tracker.png");
   background-size: auto;
   background-repeat: no-repeat;
