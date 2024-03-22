@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <div id="app">
-    <h2>Action Tracker</h2>
-    <p>Total Actions: <span id="total-actions">0</span></p>
-    <div id="action-list"></div>
+    <div id="app">
+    <div class="dot-container">
+      <img src="red-dot.png" alt="Red Dot">
+      <span class="counter" data-color="red">0</span>
+      <img src="plus.png" alt="Plus" class="plus" data-color="red">
+      <img src="minus.png" alt="Minus" class="minus" data-color="red">
+    </div>
+    <!-- Repeat the above structure for the other colored dots -->
   </div>
   <script type="module" src="main.ts"></script>
   </body>
