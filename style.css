@@ -12,7 +12,7 @@ body {
 #app {
   width: 425px;
   height: 275px;
-  background-image: url("action-tracker.png");
+  background-image: url("/action-tracker.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
