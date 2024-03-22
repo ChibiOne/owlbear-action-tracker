@@ -5,16 +5,9 @@ body {
 }
 
 #app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.background-image {
   width: 385px;
   height: 275px;
-  background-image: url("action-tracker.png");
+  background-image: url("background.png");
   background-size: cover;
   display: flex;
   justify-content: space-around;
