@@ -7,7 +7,7 @@ body {
 #app {
   width: 385px;
   height: 275px;
-  background-image: url("background.png");
+  background-image: url("action-tracker.png");
   background-size: cover;
   display: flex;
   justify-content: space-around;
