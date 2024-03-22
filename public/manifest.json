@@ -5,6 +5,8 @@
   "action": {
     "title": "Action Tracker",
     "icon": "/icon.svg",
-    "popover": "/"
+    "popover": "/",
+	"height": 550,
+	"width": 770
   }
 }
