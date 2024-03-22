@@ -5,6 +5,6 @@
   "action": {
     "title": "Action Tracker",
     "icon": "/icon.svg",
-    "popover": "/",
+    "popover": "/"
   }
 }
