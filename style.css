@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#action-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.action-token {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
