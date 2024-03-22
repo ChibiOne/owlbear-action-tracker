@@ -9,14 +9,20 @@
   </head>
   <body>
     <div id="app">
-    <div class="dot-container">
-      <img src="red-dot.png" alt="Red Dot">
-      <span class="counter" data-color="red"></span>
-      <img src="plus-sign.png" alt="Plus" class="plus" data-color="red">
-      <img src="minus-sign.png" alt="Minus" class="minus" data-color="red">
+      <div class="background-image">
+        <div class="dot-container">
+          <div class="dot">
+            <img src="red-dot.png" alt="Red Dot">
+            <span class="counter" data-color="red"></span>
+          </div>
+          <div class="plus-minus">
+            <img src="plus.png" alt="Plus" class="plus" data-color="red">
+            <img src="minus.png" alt="Minus" class="minus" data-color="red">
+          </div>
+        </div>
+        <!-- Repeat the above structure for the other colored dots -->
+      </div>
     </div>
-    <!-- Repeat the above structure for the other colored dots -->
-  </div>
   <script type="module" src="main.ts"></script>
   </body>
 </html>
