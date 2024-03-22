@@ -13,7 +13,7 @@ body {
   width: 425px;
   height: 285px;
   background-image: url("/action-tracker.png");
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
