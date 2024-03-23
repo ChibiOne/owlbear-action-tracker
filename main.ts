@@ -47,8 +47,13 @@ document.querySelectorAll(".plus").forEach((plusElement) => {
 document.querySelectorAll(".minus").forEach((minusElement) => {
   minusElement.addEventListener("click", () => {
     const color = minusElement.getAttribute("data-color");
-    updateCounter(color, -1);
-    saveCounter(color, parseInt(document.querySelector(`.counter[data-color="${color}"]`).textContent, 10));
+    const counterElement = document.querySelector(`.counter[data-color="${color}"]`);
+    const currentValue = parseInt(counterElement.textContent, 10);
+
+    if (currentValue > 0) {
+      updateCounter(color, -1);
+      saveCounter(color, currentValue - 1);
+    }
   });
 });
 
