@@ -2,11 +2,12 @@
   "name": "Action Tracker",
   "version": "1.0.0",
   "manifest_version": 1,
+  "description": "Track player actions and manage action tokens for the Daggerheart game system.",
   "action": {
     "title": "Action Tracker",
     "icon": "/dh-icon.png",
     "popover": "/",
-	"height": 325,
+	"height": 315,
 	"width": 425
   }
 }
