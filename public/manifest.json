@@ -4,7 +4,7 @@
   "manifest_version": 1,
   "action": {
     "title": "Action Tracker",
-    "icon": "/dh-icon.jpg",
+    "icon": "/dh-icon.png",
     "popover": "/",
 	"height": 325,
 	"width": 425
