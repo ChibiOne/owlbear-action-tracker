@@ -9,16 +9,6 @@ function updateCounter(color, value) {
   counterElement.textContent = newValue.toString();
 }
 
-function initializeCounters() {
-  const counterElements = document.querySelectorAll(".counter");
-  counterElements.forEach((counterElement) => {
-    const color = counterElement.getAttribute("data-color");
-    const initialValue = 0;
-    counterElement.textContent = initialValue.toString();
-    saveCounter(color, initialValue);
-  });
-}
-
 
 function initializeCounters() {
   const counterElements = document.querySelectorAll(".counter");
