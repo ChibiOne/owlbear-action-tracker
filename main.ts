@@ -19,6 +19,17 @@ function initializeCounters() {
   });
 }
 
+
+function initializeCounters() {
+  const counterElements = document.querySelectorAll(".counter");
+  counterElements.forEach((counterElement) => {
+    const color = counterElement.getAttribute("data-color");
+    const initialValue = color === "fear" || color === "countdown" ? 0 : 1;
+    counterElement.textContent = initialValue.toString();
+    saveCounter(color, initialValue);
+  });
+}
+
 function saveCounter(color, value) {
   OBR.room.setMetadata({
     [`${ID}/${color}-counter`]: value,
