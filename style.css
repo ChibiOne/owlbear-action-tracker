@@ -13,16 +13,55 @@ body {
   width: 400px;
   height: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
 
-.dot-fields {
-  display: block;
+.fields {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.field-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 7px;
+}
+
+.field {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.fear {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.countdown {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.dot-fields {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .dot-container {
@@ -65,42 +104,4 @@ body {
   height: 16px;
   cursor: pointer;
   margin: 0 2px;
-}
-
-.fields {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.field-container {
-  display: block;
-  flex-direction: column;
-  align-items: center;
-}
-
-.field {
-  width: 100px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.fear {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-}
-
-.countdown {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-}
-
-label {
-  margin-bottom: 5px;
 }
