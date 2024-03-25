@@ -19,7 +19,7 @@ body {
 }
 
 .dot-fields {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   margin: 0 7px;
@@ -74,7 +74,7 @@ body {
 }
 
 .field-container {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
 }
