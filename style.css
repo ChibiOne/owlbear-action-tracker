@@ -74,9 +74,15 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.countdown .counter {
+  color: black;
+}
+
 label {
   margin-bottom: 5px;
   color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .dot-fields {
