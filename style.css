@@ -33,13 +33,14 @@ body {
 }
 
 .field {
-  width: 100px;
+  width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   font-weight: bold;
+  position: relative;
 }
 
 .fear {
@@ -52,6 +53,14 @@ body {
   background-color: white;
   color: black;
   border: 2px solid black;
+}
+
+.fear .counter,
+.countdown .counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 label {
