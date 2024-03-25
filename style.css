@@ -41,7 +41,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   position: relative;
-  padding: 10px 0px
+  margin: 30px;
 }
 
 .counter {
@@ -76,6 +76,7 @@ body {
 
 label {
   margin-bottom: 5px;
+  color: white;
 }
 
 .dot-fields {
