@@ -17,14 +17,21 @@ function updateCounter(color: string, value: number) {
   const newValue = currentValue + value;
   counterElement.textContent = newValue > 0 ? newValue.toString() : "";
   broadcastCounterUpdate(color, newValue);
+  saveCounterValue(color, newValue);
 }
 
-function initializeCounters() {
-  const counterElements = document.querySelectorAll(".counter");
-  counterElements.forEach((counterElement) => {
-    const color = counterElement.getAttribute("data-color");
-    counterElement.textContent = "";
-    broadcastCounterUpdate(color, 0);
+function saveCounterValue(color: string, value: number) {
+  OBR.room.setMetadata({ [`${ID}/${color}-counter`]: value });
+}
+
+function loadCounterValues() {
+  OBR.room.getMetadata().then((metadata) => {
+    const counterElements = document.querySelectorAll(".counter");
+    counterElements.forEach((counterElement) => {
+      const color = counterElement.getAttribute("data-color");
+      const savedValue = metadata[`${ID}/${color}-counter`] || 0;
+      counterElement.textContent = savedValue > 0 ? savedValue.toString() : "";
+    });
   });
 }
 
@@ -53,6 +60,6 @@ document.querySelectorAll(".minus").forEach((minusElement) => {
 });
 
 OBR.onReady(() => {
-  initializeCounters();
+  loadCounterValues();
   OBR.broadcast.onMessage("counter-update", handleCounterUpdate);
 });
