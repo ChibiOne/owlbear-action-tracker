@@ -3,8 +3,12 @@ import OBR from "@owlbear-rodeo/sdk";
 const ID = "com.example.action-tracker";
 
 function broadcastCounterUpdate(color: string, value: number) {
-  console.log("Broadcasting counter update:", color, value);
-  OBR.broadcast.sendMessage("counter-update", { color, value });
+  if (OBR && OBR.broadcast) {
+    console.log("Broadcasting counter update:", color, value);
+    OBR.broadcast.sendMessage("counter-update", { color, value });
+  } else {
+    console.error("OBR.broadcast is not available");
+  }
 }
 
 function updateCounter(color: string, value: number) {
@@ -27,7 +31,6 @@ function initializeCounters() {
 
 function handleCounterUpdate(event: any) {
   const { color, value } = event.data;
-  console.log("Received counter update:", color, value);
   const counterElement = document.querySelector(`.counter[data-color="${color}"]`);
   counterElement.textContent = value.toString();
 }
