@@ -15,7 +15,7 @@ function updateCounter(color: string, value: number) {
   const counterElement = document.querySelector(`.counter[data-color="${color}"]`);
   const currentValue = parseInt(counterElement.textContent, 10) || 0;
   const newValue = currentValue + value;
-  counterElement.textContent = newValue.toString();
+  counterElement.textContent = newValue > 0 ? newValue.toString() : "";
   broadcastCounterUpdate(color, newValue);
 }
 
@@ -23,16 +23,15 @@ function initializeCounters() {
   const counterElements = document.querySelectorAll(".counter");
   counterElements.forEach((counterElement) => {
     const color = counterElement.getAttribute("data-color");
-    const initialValue = color === "fear" || color === "countdown" ? 0 : 1;
-    counterElement.textContent = initialValue.toString();
-    broadcastCounterUpdate(color, initialValue);
+    counterElement.textContent = "";
+    broadcastCounterUpdate(color, 0);
   });
 }
 
 function handleCounterUpdate(event: any) {
   const { color, value } = event.data;
   const counterElement = document.querySelector(`.counter[data-color="${color}"]`);
-  counterElement.textContent = value.toString();
+  counterElement.textContent = value > 0 ? value.toString() : "";
 }
 
 document.querySelectorAll(".plus").forEach((plusElement) => {
@@ -46,7 +45,7 @@ document.querySelectorAll(".minus").forEach((minusElement) => {
   minusElement.addEventListener("click", () => {
     const color = minusElement.getAttribute("data-color");
     const counterElement = document.querySelector(`.counter[data-color="${color}"]`);
-    const currentValue = parseInt(counterElement.textContent, 10);
+    const currentValue = parseInt(counterElement.textContent, 10) || 0;
     if (currentValue > 0) {
       updateCounter(color, -1);
     }
@@ -54,7 +53,6 @@ document.querySelectorAll(".minus").forEach((minusElement) => {
 });
 
 OBR.onReady(() => {
-  console.log("OBR is ready");
   initializeCounters();
   OBR.broadcast.onMessage("counter-update", handleCounterUpdate);
 });
