@@ -5,7 +5,7 @@
   "description": "Track player actions and manage action tokens for the Daggerheart game system.",
   "action": {
     "title": "Action Tracker",
-    "icon": "/dh-icon.png",
+    "icon": "/dh-icon UI.png",
     "popover": "/",
 	"height": 315,
 	"width": 425
